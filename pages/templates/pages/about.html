@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Page</title>
-</head>
-<body>
-<h2>This page for About!</h2>
-<hr>
-<h3 style="color: #230303">Welcome {{ name }}</h3>
-<hr>
-{% comment %}This is just a comment. It won't appear on the web page!{% endcomment %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title_head %}About Page{% endblock %}
+
+{% block content %}
+    <h1>Company About Page</h1>
+    <h2>This page for About!</h2>
+    <hr>
+    <p>The company address is <b>{{ contact_address }}</b> and the phone number is
+        <i>{{ phone_number }}</i>.</p>
+    <hr>
+    {% comment %}This is just a comment. It won't appear on the web page!{% endcomment %}
+{% endblock %}
